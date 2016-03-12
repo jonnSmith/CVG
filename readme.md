@@ -1,3 +1,9 @@
+### Instruments
+
+[Stylus](http://stylus-lang.com/)
+[Jade](http://jade-lang.com/)
+[CoffeeScript](http://coffeescript.org/)
+
 ### Installation
 
 install [Node.js](https://nodejs.org/en/download/package-manager/)
