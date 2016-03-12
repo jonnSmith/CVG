@@ -1,0 +1,19 @@
+div.header
+    ul.nav.nav-pills.pull-right
+        li.active
+            a(href="#")
+                i.fa.fa-print
+                |&nbsp;
+                span=print.button
+    h3.text-muted=sitename
+
+div.jumbotron(ng-controller="MainCtrl")
+    ul
+        li(ng-repeat="item in stringList") {{ item.name }}
+
+div.row.text-center
+    p {{greatings}}
+    p {{version}}
+
+div.footer
+    p=copyright

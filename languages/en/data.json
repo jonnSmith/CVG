@@ -1,0 +1,8 @@
+{
+  "sitename": "CVG",
+  "description": "CV Angular Generator",
+  "print": {
+    "button": "Print"
+  },
+  "copyright": "© Jonn Smith, powered by Angular 1.4.9, based on generator-angular-jade-stylus"
+}
