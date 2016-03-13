@@ -1,12 +1,13 @@
 'use strict'
 
 angular
-    .module('CVGApp', [
+    .module('cvgApp', [
         'ngCookies',
         'ngResource',
         'ngSanitize',
         'ngRoute',
-        'ngDraggable'
+        'ngDraggable',
+        'ngFileUpload'
     ])
     .config ($routeProvider,$locationProvider) ->
         $routeProvider

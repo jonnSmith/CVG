@@ -9,7 +9,7 @@ module.exports = {
         files: [{
             expand: true,
             cwd: '<%= package.dist %>',
-            src: ['*.html', 'views/{,*/}*.html'],
+            src: ['*.html', 'views/{,*/}*.html', 'tpl/{,*/}*.html'],
             dest: '<%= package.dist %>'
         }]
     }

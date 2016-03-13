@@ -67,3 +67,172 @@ go to the app root
             "node": ">=0.10.0"
           }
     }
+    
+    
+## Generators
+
+Available generators:
+
+* [angular-jade-stylus](#app) (aka [angular-jade-stylus:app](#app))
+* [angular-jade-stylus:controller](#controller)
+* [angular-jade-stylus:directive](#directive)
+* [angular-jade-stylus:filter](#filter)
+* [angular-jade-stylus:route](#route)
+* [angular-jade-stylus:service](#service)
+* [angular-jade-stylus:provider](#service)
+* [angular-jade-stylus:factory](#service)
+* [angular-jade-stylus:value](#service)
+* [angular-jade-stylus:constant](#service)
+* [angular-jade-stylus:decorator](#decorator)
+* [angular-jade-stylus:view](#view)
+
+**Note: Generators are to be run from the root directory of your app.**
+
+### App
+Sets up a new AngularJS app, generating all the boilerplate you need to get started. The app generator also optionally installs Bootstrap and additional AngularJS modules, such as angular-resource (installed by default).
+
+Example:
+```bash
+yo angular-jade-stylus
+```
+
+### Route
+Generates a controller and view, and configures a route in `app/scripts/app.js` connecting them.
+
+Example:
+```bash
+yo angular-jade-stylus:route myroute
+```
+
+Produces `app/scripts/controllers/myroute.js`:
+```javascript
+angular.module('myMod').controller('MyrouteCtrl', function ($scope) {
+  // ...
+});
+```
+
+Produces `app/views/myroute.html`:
+```html
+<p>This is the myroute view</p>
+```
+
+### Controller
+Generates a controller in `app/scripts/controllers`.
+
+Example:
+```bash
+yo angular-jade-stylus:controller user
+```
+
+Produces `app/scripts/controllers/user.js`:
+```javascript
+angular.module('myMod').controller('UserCtrl', function ($scope) {
+  // ...
+});
+```
+### Directive
+Generates a directive in `app/scripts/directives`.
+
+Example:
+```bash
+yo angular-jade-stylus:directive myDirective
+```
+
+Produces `app/scripts/directives/myDirective.js`:
+```javascript
+angular.module('myMod').directive('myDirective', function () {
+  return {
+    template: '<div></div>',
+    restrict: 'E',
+    link: function postLink(scope, element, attrs) {
+      element.text('this is the myDirective directive');
+    }
+  };
+});
+```
+
+### Filter
+Generates a filter in `app/scripts/filters`.
+
+Example:
+```bash
+yo angular-jade-stylus:filter myFilter
+```
+
+Produces `app/scripts/filters/myFilter.js`:
+```javascript
+angular.module('myMod').filter('myFilter', function () {
+  return function (input) {
+    return 'myFilter filter:' + input;
+  };
+});
+```
+
+### View
+Generates an HTML view file in `app/views`.
+
+Example:
+```bash
+yo angular-jade-stylus:view user
+```
+
+Produces `app/views/user.html`:
+```html
+<p>This is the user view</p>
+```
+
+### Service
+Generates an AngularJS service.
+
+Example:
+```bash
+yo angular-jade-stylus:service myService
+```
+
+Produces `app/scripts/services/myService.js`:
+```javascript
+angular.module('myMod').service('myService', function () {
+  // ...
+});
+```
+
+You can also do `yo angular-jade-stylus:factory`, `yo angular-jade-stylus:provider`, `yo angular-jade-stylus:value`, and `yo angular-jade-stylus:constant` for other types of services.
+
+### Decorator
+Generates an AngularJS service decorator.
+
+Example:
+```bash
+yo angular-jade-stylus:decorator serviceName
+```
+
+Produces `app/scripts/decorators/serviceNameDecorator.js`:
+```javascript
+angular.module('myMod').config(function ($provide) {
+    $provide.decorator('serviceName', function ($delegate) {
+      // ...
+      return $delegate;
+    });
+  });
+```
+
+## Options
+In general, these options can be applied to any generator, though they only affect generators that produce scripts.
+
+### CoffeeScript
+For generators that output scripts, the `--coffee` option will output CoffeeScript instead of JavaScript.
+
+For example:
+```bash
+yo angular-jade-stylus:controller user --coffee
+```
+
+Produces `app/scripts/controller/user.coffee`:
+```coffeescript
+angular.module('myMod')
+  .controller 'UserCtrl', ($scope) ->
+```
+
+A project can mix CoffeScript and JavaScript files.
+
+To output JavaScript files, even if CoffeeScript files exist (the default is to output CoffeeScript files if the generator finds any in the project), use `--coffee=false`.

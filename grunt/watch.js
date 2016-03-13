@@ -16,7 +16,7 @@ module.exports = {
         tasks: ['stylus:server', 'autoprefixer']
     },
     jade: {
-        files: ['<%= package.app %>/views/{,*/}*.jade', '<%= package.app %>/*.jade'],
+        files: ['<%= package.app %>/views/{,*/}*.jade','<%= package.app %>/tpl/{,*/}*.jade', '<%= package.app %>/*.jade'],
         tasks: ['bowerInstall', 'jade:server']
     },
     gruntfile: {

@@ -11,7 +11,7 @@ module.exports = {
             expand: true,
             cwd: '<%= package.app %>',
             dest: '.tmp',
-            src: ['*.jade', 'views/{,*/}*.jade'],
+            src: ['*.jade', 'views/{,*/}*.jade', 'tpl/{,*/}*.jade'],
             ext: '.html'
         }]
     },
@@ -20,7 +20,7 @@ module.exports = {
             expand: true,
             cwd: '<%= package.app %>',
             dest: '<%= package.dist %>',
-            src: ['*.jade', 'views/{,*/}*.jade'],
+            src: ['*.jade', 'views/{,*/}*.jade', 'tpl/{,*/}*.jade'],
             ext: '.html'
         }]
     }
