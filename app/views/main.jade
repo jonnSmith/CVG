@@ -1,19 +1,19 @@
 div.header
     ul.nav.nav-pills.pull-right
         li.active
-            a(href="#")
+            a(ng-click='logName()')
                 i.fa.fa-print
                 |&nbsp;
-                span=print.button
+                span=button.print
     h3.text-muted=sitename
-
-div.jumbotron(ng-controller="MainCtrl")
-    ul
-        li(ng-repeat="item in stringList") {{ item.name }}
+div.row
+    .col-md-8
+        .text-block.name-block(text='', type='name')
+        .text-block.position-block(text='', type='position')
+    .col-md-4.gray-border.border-left
+        .image-block.avatar-block(image='', type='avatar')
 
 div.row.text-center
-    p {{greatings}}
-    p {{version}}
-
+    p {{greetings}}
 div.footer
     p=copyright

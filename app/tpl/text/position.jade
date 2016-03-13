@@ -1,0 +1,8 @@
+.form-group
+    h4.position.blue-text(ng-click='showPosition = !showPosition') {{position}}
+        span.position-fixture(ng-show='!position')=cv.position
+    .edit-name.row(ng-show='showPosition')
+        .col-md-10
+            input.form-control(type='text', ng-model='position')
+        .col-md-2
+            button.save.btn.btn-info(ng-click='showPosition = !showPosition')=button.save

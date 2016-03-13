@@ -5,7 +5,9 @@ module.exports = {
             src: [
                 '.tmp',
                 '<%= package.dist %>/*',
-                '!<%= package.dist %>/.git*'
+                '!<%= package.dist %>/.git*',
+                '!<%= package.dist %>/uploads*',
+                '!<%= package.dist %>/.idea*'
             ]
         }]
     },

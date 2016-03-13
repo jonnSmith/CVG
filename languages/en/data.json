@@ -1,8 +1,14 @@
 {
   "sitename": "CVG",
   "description": "CV Angular Generator",
-  "print": {
-    "button": "Print"
+  "button": {
+    "print": "Print",
+    "save": "Save",
+    "upload_image": "Click to upload"
+  },
+  "cv": {
+    "name": "John Doe",
+    "position": "Front-end developer, ui/ux engineer"
   },
   "copyright": "© Jonn Smith, powered by Angular 1.4.9, based on generator-angular-jade-stylus"
 }

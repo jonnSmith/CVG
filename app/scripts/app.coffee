@@ -1,16 +1,24 @@
 'use strict'
 
 angular
-    .module('CVGApp', [
+    .module('cvgApp', [
         'ngCookies',
         'ngResource',
         'ngSanitize',
-        'ngRoute'
+        'ngRoute',
+        'ngDraggable',
+        'ngFileUpload'
     ])
-    .config ($routeProvider) ->
+    .config ($routeProvider,$locationProvider) ->
         $routeProvider
         .when '/',
             templateUrl: 'views/main.html'
-            controller: 'MainCtrl'
+            controller: 'mainCtrl'
         .otherwise
                 redirectTo: '/'
+
+        $locationProvider
+        .html5Mode
+            enabled: true
+            requireBase: false
+        return

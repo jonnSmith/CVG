@@ -1,0 +1,8 @@
+.form-group
+    h1.name(ng-click='showName = !showName') {{name}}
+        span.name-fixture(ng-show='!name')=cv.name
+    .edit-name.row(ng-show='showName')
+        .col-md-10
+            input.form-control(type='text', ng-model='name')
+        .col-md-2
+            button.save.btn.btn-info(ng-click='showName = !showName')=button.save
