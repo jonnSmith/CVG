@@ -1,6 +1,7 @@
 module.exports = {
     options: {
         pretty: true,
+        basedir: './',
         data: function (dest, src) {
             return require('../languages/en/data.json');
         }

@@ -6,14 +6,9 @@ div.header
                 |&nbsp;
                 span=print.button
     h3.text-muted=sitename
-
-div.jumbotron(ng-controller="MainCtrl")
-    ul
-        li(ng-repeat="item in stringList") {{ item.name }}
-
+div.jumbotron.text-center
+    p {{greetings}}
 div.row.text-center
-    p {{greatings}}
-    p {{version}}
-
+    p {{greetings}}
 div.footer
     p=copyright

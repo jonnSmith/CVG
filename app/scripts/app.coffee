@@ -5,12 +5,19 @@ angular
         'ngCookies',
         'ngResource',
         'ngSanitize',
-        'ngRoute'
+        'ngRoute',
+        'ngDraggable'
     ])
-    .config ($routeProvider) ->
+    .config ($routeProvider,$locationProvider) ->
         $routeProvider
         .when '/',
             templateUrl: 'views/main.html'
-            controller: 'MainCtrl'
+            controller: 'mainCtrl'
         .otherwise
                 redirectTo: '/'
+
+        $locationProvider
+        .html5Mode
+            enabled: true
+            requireBase: false
+        return
