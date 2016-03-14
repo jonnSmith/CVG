@@ -68,6 +68,32 @@ go to the app root
           }
     }
     
+
+### Create uploads directories
+
+```sh
+md uploads
+chmod 777 -R uploads
+md pdf
+chmod 777 -R pdf
+```
+
+### Install dompdf
+
+From the command line, switch to the app server public directory.
+
+```sh
+md php-vendor
+cd php-vendor
+git clone https://github.com/dompdf/dompdf.git .
+git clone https://github.com/PhenX/php-font-lib.git lib/php-font-lib
+cd lib/php-font-lib
+git checkout 0.4
+cd ..
+git clone https://github.com/PhenX/php-svg-lib.git php-svg-lib
+cd php-svg-lib
+git checkout v0.1
+```
     
 ## Generators
 
