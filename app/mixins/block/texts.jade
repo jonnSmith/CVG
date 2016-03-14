@@ -24,9 +24,9 @@ mixin textarea(show,model,holder)
 
 mixin icon(show,model,holder,list)
     .form-group.icon-edit-group
-        i.fa.blue-text.icon-to-edit(class=cv.rating.icon + ' ng-class:'+model, ng-click=show+' = !'+show, ng-hide=show)
+        i.fa.blue-text.icon-to-edit(class=' ng-class:'+model, ng-click=show+' = !'+show, ng-hide=show)
         .edit-heading.row.text-editor(ng-show=show)
-            select.form-control(type='text',ng-change='update()', ng-model=model,ng-init=model+'="'+cv.rating.icon+'"')
+            select.form-control(type='text',ng-change='update()', ng-model=model,ng-init=model+'="'+holder+'"')
                 each icon,index in list
                     option(value=index, ng-selected=model+' == "'+ index + '"', class=index)=icon
             button.save.btn.btn-info(ng-click=show+' = !'+show)=button.save
