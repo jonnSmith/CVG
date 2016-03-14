@@ -26,6 +26,7 @@ module.exports = {
                 '.htaccess',
                 '*.html',
                 'php/{,*/}*.php',
+                'php/{,*/}*.json',
                 'views/{,*/}*.html',
                 'tpl/{,*/}*.html',
                 'images/{,*/}*.{webp}',

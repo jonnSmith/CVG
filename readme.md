@@ -64,35 +64,19 @@ go to the app root
                 "time-grunt": "~0.2.1"
           },
           "engines": {
-            "node": ">=0.10.0"
+            "node": ">=4.0.0"
           }
     }
-    
 
-### Create uploads directories
-
-```sh
-md uploads
-chmod 777 -R uploads
-md pdf
-chmod 777 -R pdf
-```
-
-### Install dompdf
+### Setup php backend
 
 From the command line, switch to the app server public directory.
 
 ```sh
-md php-vendor
-cd php-vendor
-git clone https://github.com/dompdf/dompdf.git .
-git clone https://github.com/PhenX/php-font-lib.git lib/php-font-lib
-cd lib/php-font-lib
-git checkout 0.4
-cd ..
-git clone https://github.com/PhenX/php-svg-lib.git php-svg-lib
-cd php-svg-lib
-git checkout v0.1
+mkdir -m 777 uploads
+mkdir -m 777 pdf
+cd php
+composer install
 ```
     
 ## Generators
@@ -113,14 +97,6 @@ Available generators:
 * [angular-jade-stylus:view](#view)
 
 **Note: Generators are to be run from the root directory of your app.**
-
-### App
-Sets up a new AngularJS app, generating all the boilerplate you need to get started. The app generator also optionally installs Bootstrap and additional AngularJS modules, such as angular-resource (installed by default).
-
-Example:
-```bash
-yo angular-jade-stylus
-```
 
 ### Route
 Generates a controller and view, and configures a route in `app/scripts/app.js` connecting them.
@@ -241,24 +217,3 @@ angular.module('myMod').config(function ($provide) {
     });
   });
 ```
-
-## Options
-In general, these options can be applied to any generator, though they only affect generators that produce scripts.
-
-### CoffeeScript
-For generators that output scripts, the `--coffee` option will output CoffeeScript instead of JavaScript.
-
-For example:
-```bash
-yo angular-jade-stylus:controller user --coffee
-```
-
-Produces `app/scripts/controller/user.coffee`:
-```coffeescript
-angular.module('myMod')
-  .controller 'UserCtrl', ($scope) ->
-```
-
-A project can mix CoffeScript and JavaScript files.
-
-To output JavaScript files, even if CoffeeScript files exist (the default is to output CoffeeScript files if the generator finds any in the project), use `--coffee=false`.

@@ -1,0 +1,15 @@
+{
+  "name": "CVG",
+  "type": "project",
+  "description": "CVG Angular App Backend",
+  "homepage": "https://github.com/jonnSmith/CVG",
+  "license": "MIT",
+  "config": {
+    "vendor-dir": "../php-vendor"
+  },
+  "require": {
+    "php": ">=5.3.0",
+    "dompdf/dompdf": "~0.7-dev",
+    "verot/class.upload.php": "dev-master"
+  }
+}
