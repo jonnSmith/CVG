@@ -1,8 +1,8 @@
 ### Instruments
 
-[Stylus](http://stylus-lang.com/)
-[Jade](http://jade-lang.com/)
-[CoffeeScript](http://coffeescript.org/)
+CSS: [Stylus](http://stylus-lang.com/)
+HTML: [Jade](http://jade-lang.com/)
+JS: [CoffeeScript](http://coffeescript.org/)
 
 ### Installation
 
