@@ -7,7 +7,7 @@ mixin heading(show,model,holder)
             span.heading-fixture(ng-if='!'+model)=holder
         .edit-heading.row.text-editor(ng-show=show)
             .col-md-10
-                input.form-control(type='text', ng-model=model)
+                input.form-control(type='text', ng-model=model, placeholder=holder)
             .col-md-2
                 button.save.btn.btn-info(ng-click=show+' = !'+show)=button.save
 
