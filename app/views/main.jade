@@ -1,19 +1,20 @@
 div.header
     ul.nav.nav-pills.pull-right
         li.active
-            a(ng-click='logName()')
+            a(ng-click='log()')
                 i.fa.fa-print
                 |&nbsp;
                 span=button.print
     h3.text-muted=sitename
-div.row
-    .col-md-8
+div.row.top-row
+    .col-md-8.col-xs-10
         .text-block.name-block(text='', type='name')
         .text-block.position-block(text='', type='position')
-    .col-md-4.gray-border.border-left
+    .col-md-4.col-xs-2.gray-border.border-left
         .image-block.avatar-block(image='', type='avatar')
+div.row.info-row
+    .col-md-6.info-block(block='', type='info')
+    .col-md-6.rating-block(block='', type='rating')
 
-div.row.text-center
-    p {{greetings}}
 div.footer
     p=copyright

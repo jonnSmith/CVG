@@ -1,0 +1,7 @@
+include ../../mixins/block/texts
+.row
+    .col-md-1.icon-col
+        +icon('showInfoIcon','infoIcon',cv.info.icon,cv.info.icons)
+    .col-md-11.info-col
+        +heading('showInfoHeading','infoHeading',cv.info.heading)
+        +textarea('showInfoText','infoText',cv.info.text )
