@@ -7,6 +7,8 @@ module.exports = {
                 '<%= package.dist %>/*',
                 '!<%= package.dist %>/.git*',
                 '!<%= package.dist %>/uploads*',
+                '!<%= package.dist %>/pdf*',
+                '!<%= package.dist %>/php-vendor*',
                 '!<%= package.dist %>/.idea*'
             ]
         }]

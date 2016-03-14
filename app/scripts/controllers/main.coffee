@@ -1,9 +1,21 @@
 'use strict'
 
 angular.module('cvgApp')
-.controller 'mainCtrl', ($scope, Upload) ->
+.controller 'mainCtrl', ($scope, Upload, pdfFactory) ->
+
+    pdfData = {
+        filename: 'AngularTest.pdf'
+        html: '<h1>AngularTest</h1>'
+    }
 
     $scope.log = () ->
+        pdfFactory.generatePdf(pdfData).success((link) ->
+            $scope.file = link.path
+            $scope.status = link.answer
+            return
+        ).error (error) ->
+            $scope.status = 'Unable to load pdf: ' + error.message
+            return
         console.log $scope
 
     $scope.rating = 0
@@ -42,10 +54,10 @@ angular.module('cvgApp')
             ).then ((resp) ->
                 $scope.avatar = resp.data.path
                 return
-            ),((resp) ->
+            ), ((resp) ->
                 console.log 'Error status: ' + resp.status
                 return
-            ),(evt) ->
+            ), (evt) ->
                 progressPercentage = parseInt(100.0 * evt.loaded / evt.total)
                 $scope.uploaded = progressPercentage
                 return
