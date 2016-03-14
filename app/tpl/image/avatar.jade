@@ -1,3 +1,5 @@
 .form-group
-    .button(ngf-select='upload($file)')=button.upload_image
+    .avatar-container
+        .button.btn.btn-success.btn-upload-avatar(ngf-select='upload($file)', ng-hide='avatar')=button.upload_image
+        img.img-responsive(ng-src='{{avatar}}',ng-if='avatar',ngf-select='upload($file)')
 

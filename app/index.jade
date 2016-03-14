@@ -7,6 +7,7 @@ head
     // bower:css
     link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css')
+    link(rel='stylesheet', href='bower_components/textAngular/dist/textAngular.css')
     // endbower
     link(rel='stylesheet', href='bower_components/font-awesome/css/font-awesome.css')
     // endbuild
@@ -15,7 +16,7 @@ head
     // endbuild
 body(ng-app="cvgApp")
     include mixins/index/no-js
-    div.container-fluid(ng-view)
+    div.container(ng-view)
     include mixins/index/footer
     // build:js scripts/vendor.js
     // bower:js
@@ -30,6 +31,15 @@ body(ng-app="cvgApp")
     script(src='bower_components/angular-route/angular-route.js')
     script(src='bower_components/ngDraggable/ngDraggable.js')
     script(src='bower_components/ng-file-upload/ng-file-upload.js')
+    script(src='bower_components/rangy/rangy-core.js')
+    script(src='bower_components/rangy/rangy-classapplier.js')
+    script(src='bower_components/rangy/rangy-highlighter.js')
+    script(src='bower_components/rangy/rangy-selectionsaverestore.js')
+    script(src='bower_components/rangy/rangy-serializer.js')
+    script(src='bower_components/rangy/rangy-textrange.js')
+    script(src='bower_components/textAngular/dist/textAngular.js')
+    script(src='bower_components/textAngular/dist/textAngular-sanitize.js')
+    script(src='bower_components/textAngular/dist/textAngularSetup.js')
     // endbower
     // endbuild
 
@@ -41,4 +51,10 @@ body(ng-app="cvgApp")
     script(src="scripts/controllers/cv.js")
     script(src="scripts/directives/text.js")
     script(src="scripts/directives/image.js")
+    script(src="scripts/directives/heading.js")
+    script(src="scripts/directives/textarea.js")
+    script(src="scripts/directives/rating.js")
+    script(src="scripts/directives/info.js")
+    script(src="scripts/directives/block.js")
+    script(src="scripts/directives/starrating.js")
     // endbuild

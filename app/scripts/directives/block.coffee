@@ -1,11 +1,11 @@
 'use strict'
 
 angular.module('cvgApp')
-.directive('image', ->
+.directive('block', ->
     {
         restrict: 'A'
         controller: 'mainCtrl'
         templateUrl: (elem, attr) ->
-            'tpl/image/' + attr.type + '.html'
+            'tpl/block/' + attr.type + '.html'
     }
 )

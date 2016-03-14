@@ -1,9 +1,8 @@
 'use strict'
 
-#todo write tests
+describe 'Directive: starRating', ->
 
-describe 'Directive: image', ->
-
+# load the directive's module
     beforeEach module 'cvgApp'
 
     scope = {}
@@ -12,6 +11,6 @@ describe 'Directive: image', ->
         scope = $rootScope.$new()
 
     it 'should make hidden element visible', inject ($compile) ->
-        element = angular.element '<image></image>'
+        element = angular.element '<star-rating></star-rating>'
         element = $compile(element) scope
-        expect(element.text()).toBe 'this is the image directive'
+        expect(element.text()).toBe 'this is the starRating directive'

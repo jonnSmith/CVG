@@ -7,7 +7,8 @@ angular
         'ngSanitize',
         'ngRoute',
         'ngDraggable',
-        'ngFileUpload'
+        'ngFileUpload',
+        'textAngular'
     ])
     .config ($routeProvider,$locationProvider) ->
         $routeProvider

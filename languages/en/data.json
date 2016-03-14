@@ -1,6 +1,9 @@
 {
   "sitename": "CVG",
   "description": "CV Angular Generator",
+  "config": {
+    "editor_toolbar": "[['h1','h2','h3', 'ul', 'ol', 'redo', 'undo', 'clear','bold','italics']]"
+  },
   "button": {
     "print": "Print",
     "save": "Save",
@@ -8,7 +11,28 @@
   },
   "cv": {
     "name": "John Doe",
-    "position": "Front-end developer, ui/ux engineer"
+    "position": "Front-end developer, ui/ux engineer",
+    "info": {
+      "heading": "Info block",
+      "icon": "fa-briefcase",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, sem vitae gravida lacinia, orci ligula euismod lectus, non sodales mi nunc in sapien. Maecenas vel accumsan ante. Aliquam pretium velit iaculis pellentesque semper. In malesuada massa quam, vitae commodo justo fermentum ut.",
+      "icons": {
+        "fa-briefcase": "fa-briefcase",
+        "fa-facebook": "fa-facebook",
+        "fa-vk": "fa-vk"
+      }
+    },
+    "rating": {
+      "heading": "Rating block",
+      "icon": "fa-briefcase",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, sem vitae gravida lacinia, orci ligula euismod lectus, non sodales mi nunc in sapien. Maecenas vel accumsan ante. Aliquam pretium velit iaculis pellentesque semper. In malesuada massa quam, vitae commodo justo fermentum ut.",
+      "title1": "Adobe Photoshop 5",
+      "icons": {
+        "fa-briefcase": "fa-briefcase",
+        "fa-facebook": "fa-facebook",
+        "fa-vk": "fa-vk"
+      }
+    }
   },
   "copyright": "© Jonn Smith, powered by Angular 1.4.9, based on generator-angular-jade-stylus"
 }
