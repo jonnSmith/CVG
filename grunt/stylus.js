@@ -4,7 +4,7 @@ module.exports = {
             compress: false
         },
         files: {
-            '.tmp/styles/main.css': ['<%= package.app %>/styles/{,*/}*.styl']
+            '.tmp/styles/main.css': ['<%= package.app %>/styles/main.styl']
         }
     },
     server: {
@@ -12,7 +12,7 @@ module.exports = {
             compress: false
         },
         files: {
-            '.tmp/styles/main.css': ['<%= package.app %>/styles/{,*/}*.styl']
+            '.tmp/styles/main.css': ['<%= package.app %>/styles/main.styl']
         }
     },
     dist: {
@@ -20,7 +20,7 @@ module.exports = {
             compress: true
         },
         files: {
-            '.tmp/styles/main.css': ['<%= package.app %>/styles/{,*/}*.styl']
+            '.tmp/styles/main.css': ['<%= package.app %>/styles/main.styl']
         }
     }
 }
