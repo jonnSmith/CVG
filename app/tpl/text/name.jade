@@ -1,8 +1,6 @@
 .form-group.text-edit-group
     h1.text-to-edit.name(ng-click='showName = !showName',ng-hide='showName') {{name}}
         span.name-fixture(ng-show='!name')=cv.name
-    .edit-name.row.text-editor(ng-show='showName')
-        .col-md-10
-            input.form-control(type='text', ng-model='name', placeholder=cv.name)
-        .col-md-2
-            button.save.btn.btn-info(ng-click='showName = !showName')=button.save
+    .edit-name.text-editor(ng-show='showName')
+        input.form-control(type='text', ng-model='name', placeholder=cv.name)
+        button.save.btn.btn-info(ng-click='showName = !showName')=button.save

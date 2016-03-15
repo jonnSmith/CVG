@@ -1,7 +1,16 @@
-@require variables
 body
     padding-top 20px
     padding-bottom 20px
+
+    .top-row,
+    .info-row
+        h1,
+        h2,
+        h3,
+        h4,
+        h5
+            padding 0
+            margin 0
 
     .blue-text
         color ui-blue
@@ -11,14 +20,122 @@ body
         &.border-left
             border-left-width 1px
 
+    .nav-pills > li.active > a
+        bordered-button ui-blue white
+        padding 6px 10px
+        i.fa
+            padding-right 10px
+
+    .top-row
+        .top-name-block
+            padding-top 30px
+            padding-bottom 30px
+            .text-block
+                font-size 14px
+                .text-edit-group
+                    &.name-block
+                        font-size 24px
+                        line-height 24px
+                    &.position-block
+                        font-size 16px
+                        line-height 16px
+        .avatar-block
+            text-align center
+            height 150px
+            .form-group
+                padding 0
+                margin 0
+                .button.btn.btn-upload-avatar
+                    bordered-button ui-blue white
+                    padding 62px 0
+                    text-align center
+                    box-sizing border-box
+                    width 100%
+            .img-responsive
+                width 150px
+                display inline-block
+
+    .info-row
+        margin-top 15px
+
     .text-edit-group
+        position relative
+        height text-height
+        z-index 1
         .text-to-edit
-            color ui-black
+            height inherit
+            line-height text-height
+            cursor pointer
         .text-editor
+            absolute bottom left
+            size 100% inherit
             .form-control
+                padding 0
+                margin 0
+                size 100% inherit
+                padding-right 50px
+                line-height text-height
                 color ui-black
+                border-radius 0
+                border none
+                box-shadow none
+                border-bottom 3px solid ui-black
+                box-sizing border-box
             .btn
-                background ui-blue
+                absolute bottom right
+                bordered-button ui-black white
+        &.edit-rating
+            .btn
+                right -100%
+
+    .icon-edit-group
+        position relative
+        height text-height
+        z-index 2
+        i
+            font-size text-height
+            line-height text-height
+            cursor pointer
+        .edit-icon
+            absolute bottom left
+            select
+                width 150px
+                height text-height
+                option
+                    &:before
+                        font-family 'FontAwesome'
+            .btn
+                absolute bottom left 150px
+                bordered-button ui-black white
+
+    .textarea-edit-group
+        .textarea-to-edit
+            color ui-black
+            cursor pointer
+        .textarea-editor
+            .btn-toolbar
+                margin-bottom 10px
+            .ta-scroll-window.form-control
+                min-height 150px
+                height 150px
+                border 1px solid ui-black
+                border-radius 0
+                box-shadow none
+                .ta-bind
+                    min-height 150px
+                    height 150px
+                &:focus
+                &:active
+                    box-shadow none
+        .btn
+            bordered-button ui-black white
+            &.save
+                width 100%
+                margin-top 10px
+            &.btn-default
+                border-right none
+                &:last-child
+                    border-right 3px solid ui-black
 
     .header,
     .footer
@@ -33,27 +150,6 @@ body
             margin-bottom 0
             line-height 40px
             padding-bottom 19px
-
-    .top-row
-        .text-block
-            font-size 14px
-            &.name-block
-                font-size 24px
-                line-height 24px
-            &.position-block
-                font-size 16px
-                line-height 16px
-        .avatar-block
-            text-align center
-            .img-responsive
-                width 150px
-                display inline-block
-
-    .icon-col
-        select
-            option
-                &:before
-                    font-family 'FontAwesome'
 
     .rating-col
         .ratings-group
@@ -74,6 +170,7 @@ body
                 float left
                 padding 0
                 margin 0 0 0 5px
+                cursor pointer
                 &.filled
                     color:ui-blue
 
