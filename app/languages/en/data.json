@@ -41,11 +41,10 @@
         "fa-mercury": "Mercury"
       }
     },
-    "rating": {
+    "skills": {
       "heading": "Rating block",
       "icon": "fa-opencart",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, sem vitae gravida lacinia, orci ligula euismod lectus, non sodales mi nunc in sapien. Maecenas vel accumsan ante. Aliquam pretium velit iaculis pellentesque semper. In malesuada massa quam, vitae commodo justo fermentum ut.",
-      "title1": "Adobe Photoshop 5",
       "icons": {
         "fa-opencart": "Opencart",
         "fa-openid": "Openid",
@@ -67,6 +66,20 @@
         "fa-phone": "Phone",
         "fa-phone-square": "Phone square",
         "fa-picture-o": "Picture o"
+      },
+      "ratings" : {
+        "rating1": {
+          "current": "8",
+          "max": "10",
+          "name": "GruntJS",
+          "show": false
+        },
+        "rating2": {
+          "current": "5",
+          "max": "10",
+          "name": "AngularJS",
+          "show": false
+        }
       }
     }
   },

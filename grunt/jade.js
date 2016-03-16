@@ -3,11 +3,12 @@ module.exports = {
         pretty: true,
         basedir: './',
         data: function (dest, src) {
-            return require('../languages/en/data.json');
+            return require('../app/languages/'+this.language+'/data.json');
         }
     },
     server: {
         files: [{
+            language: '<%= package.language %>',
             expand: true,
             cwd: '<%= package.app %>',
             dest: '.tmp',
@@ -17,6 +18,7 @@ module.exports = {
     },
     dist: {
         files: [{
+            language: '<%= package.language %>',
             expand: true,
             cwd: '<%= package.app %>',
             dest: '<%= package.dist %>',

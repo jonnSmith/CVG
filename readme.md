@@ -28,6 +28,7 @@ go to the app root
           "license": "MIT",
           "version": "0.0.1",
           "app":  "app",
+          "language": "en",
           "dist": "/var/www/vhosts/app/public",
           "dependencies": {},
           "devDependencies": {

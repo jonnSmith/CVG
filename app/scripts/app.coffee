@@ -17,9 +17,11 @@ angular
             controller: 'mainCtrl'
         .otherwise
                 redirectTo: '/'
-
         $locationProvider
         .html5Mode
             enabled: true
             requireBase: false
+        return
+    .run ($rootScope) ->
+        $rootScope.language = 'en'
         return

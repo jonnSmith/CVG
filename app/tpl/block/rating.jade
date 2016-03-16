@@ -1,9 +1,0 @@
-include ../../mixins/block/texts
-.row
-    .col-md-1.icon-col
-        +icon('showRatingIcon','ratingIcon',cv.rating.icon,cv.rating.icons)
-    .col-md-11.rating-col
-        +heading('showRatingHeading','ratingHeading',cv.rating.heading)
-        .form-group.ratings-group
-            .row.rating-row(ng-repeat='rating in skills')
-                include ../../mixins/block/rating

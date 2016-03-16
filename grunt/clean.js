@@ -10,6 +10,7 @@ module.exports = {
                 '!<%= package.dist %>/pdf*',
                 '!<%= package.dist %>/php*',
                 '!<%= package.dist %>/php-vendor*',
+                '!<%= package.dist %>/languages*',
                 '!<%= package.dist %>/.idea*'
             ]
         }]

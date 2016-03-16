@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('cvgApp')
-.controller 'mainCtrl', ($scope, Upload, pdfFactory) ->
+.controller 'mainCtrl', ($scope, Upload, pdfFactory, translate,$rootScope) ->
 
     pdfData = {
         filename: 'AngularTest.pdf'
@@ -19,26 +19,10 @@ angular.module('cvgApp')
         console.log $scope
 
     $scope.rating = 0
-    $scope.skills = [
-        {
-            current: 8
-            max: 10
-            name: "Photoshop"
-            show: false
-        }
-        {
-            current: 8
-            max: 10
-            name: "Illustrator"
-            show: false
-        }
-        {
-            current: 7
-            max: 10
-            name: "AngularJS"
-            show: false
-        }
-    ]
+
+    translate.getTranslates('/languages/' + $rootScope.language + '/data.json').then (translates) ->
+        $scope.translates = translates
+        return
 
     $scope.getSelectedRating = (rating) ->
         console.log rating

@@ -2,6 +2,14 @@ body
     padding-top 20px
     padding-bottom 20px
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5
+        text-transform uppercase
+        font-weight 400
+
     .top-row,
     .info-row
         h1,
@@ -156,23 +164,25 @@ body
             font-size 14px
             .rating-row
                 .rating-name
-                    .text-to-edit
-                        font-size 14px
-
-    .rating-list-container
-        ul.rating
-            list-style none
-            padding 0
-            margin 0
-            li
-                display inline-block
-                list-style none
-                float left
-                padding 0
-                margin 0 0 0 5px
-                cursor pointer
-                &.filled
-                    color:ui-blue
+                    .text-edit-group
+                        margin-bottom 5px
+                        .text-to-edit
+                            font-size 14px
+                            margin 0
+                .rating-list-container
+                    ul.rating
+                        list-style none
+                        padding 0
+                        margin 0
+                        li
+                            display inline-block
+                            list-style none
+                            float left
+                            padding 0
+                            margin 0 0 0 5px
+                            cursor pointer
+                            &.filled
+                                color:ui-blue
 
     .footer
         padding-top 19px
