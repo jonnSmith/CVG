@@ -8,9 +8,12 @@ include 'base_url.php';
 $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
 
-$html = isset($request->html) ? $request->html : '<h2 style="border-radius:5px;background: #000;color:#FFF;">hello world</h2><input type="text" placeholder="test" value="test"/>';
+$html = isset($request->html) ? $request->html : '<h2>No html passed from App</h2>';
 $filename = isset($request->filename) ? $request->filename : 'CV.pdf';
 $pdfDir = 'pdf/';
+
+$css = file_get_contents('../styles/purify.css');
+$html = '<!DOCTYPE html><html><head><style>'.$css.'</style></head><body>'.$html.'</body></html>';
 
 $filepath = $_SERVER['DOCUMENT_ROOT'].'/'.$pdfDir.$filename;
 
