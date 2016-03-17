@@ -1,13 +1,10 @@
 div.header
     ul.nav.nav-pills.pull-right
         li.active
-            a(ng-click='log()')
+            a(ng-click='print()')
                 i.fa.fa-print
                 span=button.print
     h3.text-muted=sitename
-        |&nbsp;
-        a(ng-if='file', href='{{file}}', target='_blank')
-            i.fa.fa-file-pdf-o
 .content(html2pdf='')
     .cv
         div.row.top-row
