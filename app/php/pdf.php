@@ -13,9 +13,9 @@ $filename = isset($request->filename) ? $request->filename : 'CV.pdf';
 $pdfDir = 'pdf/';
 
 $css = file_get_contents('../styles/purify.css');
-$html = '<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>'.$css.'</style></head><body>'.$html.'</body></html>';
+$html = '<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>'.$css.'</style></head><body><div class="container">'.$html.'<div/></body></html>';
 
-$myfile = fopen("test.html", "w");
+$myfile = fopen(str_replace('pdf','html',$filename), "w");
 fwrite($myfile, $html);
 fclose($myfile);
 
