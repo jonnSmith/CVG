@@ -8,15 +8,16 @@ div.header
         |&nbsp;
         a(ng-if='file', href='{{file}}', target='_blank')
             i.fa.fa-file-pdf-o
-div.row.top-row
-    .col-md-8.col-lg-10.top-name-block
-        .text-block.name-block(text='', type='name')
-        .text-block.position-block(text='', type='position')
-    .col-md-4.col-lg-2.gray-border.border-left
-        .image-block.avatar-block(image='', type='avatar')
-div.row.info-row
-    .col-md-6.info-block(block='', type='info')
-    .col-md-6.rating-block(block='', type='skills')
-
+.content(html2pdf='')
+    .cv
+        div.row.top-row
+            .col-md-8.col-lg-10.top-name-block
+                .text-block.name-block(text='', type='name')
+                .text-block.position-block(text='', type='position')
+            .col-md-4.col-lg-2.gray-border.border-left
+                .image-block.avatar-block(image='', type='avatar')
+        div.row.info-row
+            .col-md-6.info-block(block='', type='info')
+            .col-md-6.skills-block(block='', type='skills')
 div.footer
     p=copyright

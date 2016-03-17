@@ -2,8 +2,8 @@ include ../../mixins/block/texts
 .row
     .col-md-1.icon-col
         +icon('showSkillsIcon','skillsIcon',cv.skills.icon,cv.skills.icons)
-    .col-md-11.rating-col
+    .col-md-11.stars-col
         +heading('showSkillsHeading','skillsHeading',cv.skills.heading)
-        .form-group.ratings-group
-            .row.rating-row(ng-repeat='rating in translates.cv.skills.ratings')
+        .form-group.stars-group
+            .row.stars-row(ng-repeat='rating in translates.cv.skills.ratings')
                 include ../../mixins/block/rating
