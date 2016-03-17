@@ -1,9 +1,11 @@
-.col-md-4.rating-name
+.col-md-4.stars-name
     .form-group.text-edit-group
         p.text-to-edit.blue-text(ng-click='rating.show = !rating.show',ng-hide='rating.show') {{ratingName[$index]}}
-            span.position-fixture(ng-show='!ratingName[$index]') {{rating.name}}
-        .edit-rating.row.text-editor(ng-show='rating.show')
-            input.form-control(type='text', ng-model='ratingName[$index]', placeholder='{{rating.name}}')
-            button.save.btn.btn-info(ng-click='rating.show = !rating.show')=button.save
-.col-md-8.rating-list-container
+            fixture
+                span(ng-show='!ratingName[$index]') {{rating.name}}
+        editor
+            .text-editor.row.edit-stars(ng-show='rating.show')
+                input.form-control(type='text', ng-model='ratingName[$index]', placeholder='{{rating.name}}')
+                button.save.btn.btn-info(ng-click='rating.show = !rating.show')=button.save
+.col-md-8.stars-list-container
     div(star-rating='', rating-value='rating.current', max='rating.max', on-rating-selected='getSelectedRating(rating)')

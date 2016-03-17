@@ -1,6 +1,7 @@
 .form-group.text-edit-group
     h4.text-to-edit.position.blue-text(ng-click='showPosition = !showPosition',ng-hide='showPosition') {{position}}
-        span.position-fixture(ng-show='!position')=cv.position
-    .edit-name.text-editor(ng-show='showPosition')
+        fixture
+            span(ng-show='!position')=cv.position
+    editor.text-editor(ng-show='showPosition')
         input.form-control(type='text', ng-model='position', placeholder=cv.position)
         button.save.btn.btn-info(ng-click='showPosition = !showPosition')=button.save

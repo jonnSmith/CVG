@@ -4,26 +4,28 @@ mixin heading(show,model,holder)
             |{{
             =model
             |}}
-            span.heading-fixture(ng-if='!'+model)=holder
-        .edit-heading.text-editor(ng-show=show)
-            input.form-control(type='text', ng-model=model, placeholder=holder)
-            button.save.btn.btn-info(ng-click=show+' = !'+show)=button.save
+            fixture
+                span(ng-if='!'+model)=holder
+        editor
+            .text-editor(ng-show=show)
+                input.form-control(type='text', ng-model=model, placeholder=holder)
+                button.save.btn.btn-info(ng-click=show+' = !'+show)=button.save
 
 mixin textarea(show,model,holder)
     .form-group.textarea-edit-group
         .textarea-to-edit(ng-click=show+' = !'+show, ng-hide=show)
-            .text-fixture(ng-if='!'+model)=holder
+            fixture
+                p(ng-if='!'+model)=holder
             .text-html(ng-bind-html=model)
-        .edit-heading.row.textarea-editor(ng-show=show)
-            .col-md-12
+        editor
+            .textarea-editor(ng-show=show)
                 .editor(text-angular='',ng-model=model,ta-disabled='disabled',ta-toolbar=config.editor_toolbar)
-            .col-md-12
                 button.save.btn.btn-info(ng-click=show+' = !'+show)=button.save
 
 mixin icon(show,model,holder,list)
     .form-group.icon-edit-group
         i.fa.blue-text.icon-to-edit(class=' ng-class:'+model, ng-click=show+' = !'+show, ng-hide=show)
-        .edit-icon.row.text-editor(ng-show=show)
+        editor.text-editor(ng-show=show)
             select.form-control(type='text',ng-change='update()', ng-model=model,ng-init=model+'="'+holder+'"')
                 each icon,index in list
                     option(value=index, ng-selected=model+' == "'+ index + '"', class=index)=icon
