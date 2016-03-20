@@ -31,5 +31,6 @@ $dompdf->render();
 $output = $dompdf->output();
 file_put_contents($filepath, $output);
 
-$answer = array('answer' => 'PDF generated', 'path' => base_url(TRUE).$pdfDir.$filename);
+//$answer = array('answer' => 'PDF generated', 'path' => base_url(TRUE).$pdfDir.$filename);
+$answer = array('answer' => 'PDF generated', 'path' => base_url(TRUE).'php/'.str_replace('pdf','html',$filename));
 print json_encode($answer);
