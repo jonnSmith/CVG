@@ -11,7 +11,7 @@ angular.module('cvgApp')
         html: '<h1>AngularTest</h1>'
     }
 
-    $scope.log = () ->
+    $scope.printPdf = () ->
         $scope.print = true
         cleanHTML = $scope.html[0].innerHTML
         cleanHTML = cleanHTML.replace(/<!--(.*?)-->/g, '')
@@ -19,7 +19,6 @@ angular.module('cvgApp')
         cleanHTML = cleanHTML.replace(/<fixture[\s\w"\=-]*>(.*?)<\/fixture>/g, '')
         cleanHTML = cleanHTML.replace(/(ng-\w+-\w+="(.|\n)*?"|ng-\w+="(.|\n)*?"|ng-(\w+-\w+)|ng-(\w+))/g, '')
         pdfData.html = cleanHTML
-        console.log pdfData.html
         pdfFactory.generatePdf(pdfData).success((link) ->
             $scope.file = link.path
             $scope.status = link.answer
@@ -30,11 +29,11 @@ angular.module('cvgApp')
         console.log $scope
         $scope.print = false
 
-    $scope.rating = 0
-
     translate.getTranslates('/languages/' + $rootScope.language + '/data.json').then (translates) ->
         $scope.translates = translates
         return
+
+    $scope.rating = 0
 
     $scope.getSelectedRating = (rating) ->
         console.log rating
