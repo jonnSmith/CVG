@@ -12,10 +12,10 @@ $html = isset($request->html) ? $request->html : '<h2>No html passed from App</h
 $filename = isset($request->filename) ? $request->filename : 'CV.pdf';
 $pdfDir = 'pdf/';
 
-$css = file_get_contents('../styles/purify.css');
+$css = file_get_contents('../styles/short.css');
 $html = '<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>'.$css.'</style></head><body><div class="container">'.$html.'<div/></body></html>';
 
-$myfile = fopen(str_replace('pdf','html',$filename), "w");
+$myfile = fopen($_SERVER['DOCUMENT_ROOT'].'/html/'.str_replace('pdf','html',$filename), "w");
 fwrite($myfile, $html);
 fclose($myfile);
 
@@ -32,5 +32,5 @@ $output = $dompdf->output();
 file_put_contents($filepath, $output);
 
 //$answer = array('answer' => 'PDF generated', 'path' => base_url(TRUE).$pdfDir.$filename);
-$answer = array('answer' => 'PDF generated', 'path' => base_url(TRUE).'php/'.str_replace('pdf','html',$filename));
+$answer = array('answer' => 'PDF generated', 'path' => base_url(TRUE).'html/'.str_replace('pdf','html',$filename));
 print json_encode($answer);

@@ -6,7 +6,7 @@ angular.module('cvgApp')
     $scope.print = false
 
     pdfData = {
-        filename: 'AngularTest.pdf'
+        filename: 'cvg.pdf'
         username: 'UserName'
         html: '<h1>AngularTest</h1>'
     }

@@ -27,7 +27,9 @@ module.exports = function (grunt) {
         'rev',
         'usemin',
         'htmlmin',
-        'purifycss',
+        'sass',
+        'recess',
+        'purifycss:short',
         'pleeease'
     ]);
 
