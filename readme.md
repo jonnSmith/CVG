@@ -6,6 +6,11 @@ JS: [CoffeeScript](http://coffeescript.org/)
 
 ### Installation
 
+install [Ruby](http://rubyinstaller.org/)
+
+    gem source -a http://rubygems.org/
+    gem install sass
+
 install [Node.js](https://nodejs.org/en/download/package-manager/)
 go to the app root
 
@@ -52,6 +57,8 @@ go to the app root
                 "grunt-contrib-uglify": "~0.2.0",
                 "grunt-contrib-watch": "~0.5.2",
                 "grunt-google-cdn": "~0.2.0",
+                "grunt-recess": "^1.0.1",
+                "grunt-contrib-sass": "~1",
                 "grunt-pleeease": "~1.3.2",
                 "grunt-purifycss": "~0.1.0",
                 "grunt-newer": "~0.6.1",
@@ -76,6 +83,7 @@ From the command line, switch to the app server public directory.
 ```sh
 mkdir -m 777 uploads
 mkdir -m 777 pdf
+mkdir -m 777 html
 cd php
 composer install
 ```

@@ -4,12 +4,12 @@ head
     include mixins/index/header
     // Place favicon.ico and apple-touch-icon.png in the root directory
     // build:css styles/vendor.css
-    // bower:css
     link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='bower_components/font-awesome/css/font-awesome.css')
+    // bower:css
     link(rel='stylesheet', href='bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css')
     link(rel='stylesheet', href='bower_components/textAngular/dist/textAngular.css')
     // endbower
-    link(rel='stylesheet', href='bower_components/font-awesome/css/font-awesome.css')
     // endbuild
     // build:css(.tmp) styles/main.css
     link(rel="stylesheet", href="styles/main.css")
@@ -24,6 +24,7 @@ body(ng-app="cvgApp")
     script(src='bower_components/es5-shim/es5-shim.js')
     script(src='bower_components/angular/angular.js')
     script(src='bower_components/json3/lib/json3.min.js')
+    script(src='bower_components/tether/dist/js/tether.js')
     script(src='bower_components/bootstrap/dist/js/bootstrap.js')
     script(src='bower_components/angular-resource/angular-resource.js')
     script(src='bower_components/angular-cookies/angular-cookies.js')
@@ -46,19 +47,11 @@ body(ng-app="cvgApp")
     // build:js(.tmp) scripts/main.js
     script(src="scripts/app.js")
     script(src="scripts/controllers/main.js")
-    script(src="scripts/filters/myfilter.js")
-    script(src="scripts/controllers/cvcontroller.js")
-    script(src="scripts/controllers/cv.js")
     script(src="scripts/directives/text.js")
     script(src="scripts/directives/image.js")
-    script(src="scripts/directives/heading.js")
-    script(src="scripts/directives/textarea.js")
-    script(src="scripts/directives/rating.js")
-    script(src="scripts/directives/info.js")
     script(src="scripts/directives/block.js")
     script(src="scripts/directives/starrating.js")
+    script(src="scripts/directives/html2pdf.js")
     script(src="scripts/services/pdffactory.js")
     script(src="scripts/services/translate.js")
-    script(src="scripts/directives/html.js")
-    script(src="scripts/directives/html2pdf.js")
     // endbuild
